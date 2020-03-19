@@ -4,14 +4,16 @@
   "description": "Projeto desenvolvido durante o bootcamp da Rocketseat - BackEnd GoBarber",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --exec sucrase-node ./src/server.js",
+    "dev:debug": "nodemon --inspect ./src/server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Gisiona/bootcamp-rocketseat-nodejs-backend-gobarber.git"
   },
   "keywords": [
-    "BoBarber",
+    "Go-Barber",
     "Api",
     "Rest",
     "NodeJS",
@@ -26,5 +28,9 @@
   "homepage": "https://github.com/Gisiona/bootcamp-rocketseat-nodejs-backend-gobarber#readme",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2",
+    "sucrase": "^3.12.1"
   }
 }
