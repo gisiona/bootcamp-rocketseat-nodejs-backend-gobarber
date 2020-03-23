@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon --exec sucrase-node ./src/server.js",
-    "dev:debug": "nodemon --inspect ./src/server.js"
+    "dev:debug": "nodemon --inspect ./src/server.js",
+    "build": "sucrase ./src -d ./dist --transforms imports",
+    "start": "node ./dist/server.js"
   },
   "repository": {
     "type": "git",
@@ -30,7 +32,11 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-prettier": "^3.1.2",
     "nodemon": "^2.0.2",
+    "prettier": "^2.0.1",
     "sucrase": "^3.12.1"
   }
 }
